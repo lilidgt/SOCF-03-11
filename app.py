@@ -19,14 +19,14 @@ def pegar_metricas():
 
 @APP.route("/")
 def index():
-    m = pegar_metricas()
+    metrica = pegar_metricas()
     return (
         f"<h1>Projeto II – Sistemas Operacionais em Cloud</h1>"
-        f"<p>Estudantes: {m['estudantes']}</p>"
-        f"<p>PID: {m['pid']}</p>"
-        f"<p>Memória usada: {m['memoria_usada']} MB</p>"
-        f"<p>CPU: {m['cpu_porcentagem']}%</p>"
-        f"<p>Sistema operacional: {m['sistema_operacional']}</p>"
+        f"<p>Estudantes: {metrica['estudantes']}</p>"
+        f"<p>PID: {metrica['pid']}</p>"
+        f"<p>Memória usada: {metrica['memoria_usada']} MB</p>"
+        f"<p>CPU: {metrica['cpu_porcentagem']}%</p>"
+        f"<p>Sistema operacional: {metrica['sistema_operacional']}</p>"
     )
 
 @APP.route("/info")
